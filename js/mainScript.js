@@ -4,3 +4,14 @@ setInterval(function(){
  $('.slide:first').fadeOut(2000).next().fadeIn(2000)
  $('.slide:first').appendTo('.slideWrap') //첫번째 이미지를 마지막에 추가하여 반복적으로 이미지를 재생하도록 함
 },3000)
+
+//메뉴 슬라이드
+$(".main-menu li").hover( 
+    function() {
+     $(this).children(".sub-inner").stop().slideDown("slow");
+    },
+    function() {
+     $(this).children(".sub-inner").stop().slideUp("fast");
+    }
+    );
+    
