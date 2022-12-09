@@ -6,6 +6,10 @@ body {
     line-height: 1.4;
 }
 
+/*블럭 색깔 바꾸기*/
+::selection {background:#a3b18a; color: #344e41;}
+::-moz-selection{background:#a3b18a; color: #344e41;}
+
 img {
     display: block;
 }
@@ -73,22 +77,39 @@ header .main-menu>li>a{
 .sub-inner {
     width: 100%;
     position: fixed;
-    left: 0;
+    right: 0;
     background-color: #1a1e1c;
-    height: 70px;
-    display: none;
+    height: 60px;
+    display: none;    
 }
+
 .sub-menu {
     width: 55%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    
 }
+
 .sub-menu>li {
-    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.sub-menu>li>a{
+    width: 100%;
+    height: 100%;
+    color: #dad7cd;
+    text-decoration: none;
+    display: block;
+}
+.sub-menu>li>a:hover{
+    color: #588157;
 }
 
 
-header .main-menuli a:hover{
+header .main-menu li>a:hover{
     font-weight: bold;
     transition: .1s;
 } 
@@ -137,14 +158,22 @@ header .material-icons{
     height: 100%;
     transform: translate(0%, 60%);
 }
-.main-section h1 {
+.title {
     font-size: 60px;
 }
-.main-section h4 {
+.content {
     font-size: 30px;
 }
-
-
+/*깜빡이는 효과*/
+.blink {
+    font-size: 60px;
+    animation: blink 0.8s infinite;
+}
+@keyframes blink {
+    to {
+      opacity: 0;
+    }
+  }
 
 @media screen and (max-width: 1500px){
     header .main-menu {
@@ -185,13 +214,50 @@ header .material-icons{
         height: 600px; 
         transition: .5s;
     }
-    .slideText h1{
+    .title, .blink {
         font-size: 50px;
     }
-    .slideText h4{
+    .content{
         font-size: 20px;
     }
     .slideText{
         transform: translate(0%, 40%);
+    }
+}
+@media screen and (max-width: 400px){
+    header .main-menu {
+        display: none;
+    }
+    header .material-icons{ 
+        height: 100px;
+        display: flex;
+    }
+    header {
+        height: 90px;
+        transition: .5s;
+    }
+    header .logo img {
+        width: 120px;
+        height: 100px;
+        margin: 5px;
+    }
+    header .logo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .slide img {
+        height: 600px; 
+        transition: .5s;
+    }
+    .title, .blink{
+        font-size: 30px;
+    }
+    .content{
+        font-size: 11px;
+    }
+    .slideText{
+        transform: translate(0%, 40%);
+        line-height: 1.5;
     }
 }

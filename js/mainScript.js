@@ -13,5 +13,31 @@ $(".main-menu li").hover(
     function() {
      $(this).children(".sub-inner").stop().slideUp("fast");
     }
-    );
+);
+
+//타이핑 효과
+// const content = "New Work, New Future ";
+// const text = document.querySelector(".title");
+// let i = 0;
+
+// async function typing(){
     
+//     let txt = content[i++];
+//     text.innerHTML += txt;
+    
+//     await delay(5);
+
+//     if (i >= content.length) {
+//         text.textContent = "";
+//         i = 0;
+//     }
+// }
+// setInterval(typing, 200)
+    
+
+// // 딜레이 기능
+// function delay(n){
+//     return new Promise(function(resolve){
+//         setTimeout(resolve,n*1000);
+//     });
+// }
