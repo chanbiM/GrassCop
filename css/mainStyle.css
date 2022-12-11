@@ -224,7 +224,7 @@ header .material-icons{
         transform: translate(0%, 40%);
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 768px){
     header .main-menu {
         display: none;
     }
